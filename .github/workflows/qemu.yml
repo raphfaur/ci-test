@@ -1,0 +1,14 @@
+name: Build and test binary in QEMU
+on:
+  push:
+    branches:
+      - "main"
+
+jobs:
+  qemu_job:
+    runs-on: self-hosted
+    steps:
+      - name: qemu python
+        uses: ./.github/action/qemu
+        with:
+          name: "bob"
