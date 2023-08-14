@@ -1,0 +1,13 @@
+name: "QEMU"
+description: "Builds a repository and run several tests with QEMU qmp"
+inputs:
+  name:
+    description: 'Name'
+    required: true
+    default: "Test"
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - --name=${{inputs.name}}
