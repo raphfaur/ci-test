@@ -8,6 +8,9 @@ jobs:
   qemu_job:
     runs-on: self-hosted
     steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        
       - name: qemu python
         uses: ./.github/action/qemu
         with:
