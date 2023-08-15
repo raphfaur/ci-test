@@ -10,8 +10,9 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-        
+
       - name: qemu python
         uses: ./.github/action/qemu
         with:
-          name: "bob"
+          time_before_tests : "1"
+          kint: "0x01"

@@ -1,10 +1,14 @@
 name: "QEMU"
 description: "Builds a repository and run several tests with QEMU qmp"
 inputs:
-  name:
-    description: 'Name'
+  time_before_tests:
+    description: 'time_before_tests'
     required: true
-    default: "Test"
+    default: "1"
+  kint:
+    description: 'kint'
+    required: true
+    default: "0x01"
 
 runs:
   using: 'docker'
