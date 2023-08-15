@@ -14,4 +14,4 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - --name=${{inputs.name}}
+    - --time_before_tests=${{inputs.time_before_tests}} --kint=${{inputs.kint}}
