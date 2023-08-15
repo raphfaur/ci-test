@@ -4,6 +4,6 @@ COPY qemu.py /qemu.py
 COPY boot.img /boot.img
 COPY requirements.txt /requirements.txt
 
-RUN apt update && apt -y install && apt install -y qemu-system-x86 
+RUN apt update && apt -y install && apt install -y qemu-system-x86 && pip install /requirements.txt
 
-ENTRYPOINT [ "python", "/qemu.py" ]
+ENTRYPOINT [ "python3", "/qemu.py" ]
